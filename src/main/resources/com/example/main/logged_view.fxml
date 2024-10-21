@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane fx:id="pane" dividerPositions="0.20922956589753622" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="855.0" stylesheets="@Application.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.LoggedController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="backBoton" layoutX="4.0" layoutY="395.0" mnemonicParsing="false" onAction="#backHome" prefHeight="51.0" prefWidth="167.0" text="Log out" />
+            <Label id="label" layoutX="14.0" layoutY="14.0" prefHeight="24.0" prefWidth="147.0" text="Welcome back" />
+            <Label id="label" layoutX="57.0" layoutY="44.0" prefHeight="24.0" prefWidth="115.0" text="Nombre" />
+            <ImageView fitHeight="39.0" fitWidth="37.0" layoutX="14.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../java/com/example/main/image/Avatar.png" />
+               </image>
+            </ImageView>
+            <Button id="menuBoton" layoutY="81.0" mnemonicParsing="false" onAction="#showInventory" prefHeight="51.0" prefWidth="175.0" text="Inventory" />
+            <Button id="menuBoton" layoutY="133.0" mnemonicParsing="false" onAction="#showReservations" prefHeight="51.0" prefWidth="175.0" text="Reservations" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="607.0">
+         <children>
+            <TabPane fx:id="inventory" layoutX="2.0" layoutY="61.0" prefHeight="393.0" prefWidth="416.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Productos">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="422.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="IDProduct" />
+                            <TableColumn prefWidth="75.0" text="Nombre" />
+                              <TableColumn prefWidth="84.66668701171875" text="Ingreso Mes" />
+                              <TableColumn prefWidth="72.66670227050781" text="Salida Mes" />
+                              <TableColumn prefWidth="107.3333740234375" text="Coste" />
+                          </columns>
+                        </TableView>
+                     </content>
+                </Tab>
+                <Tab text="Facturas">
+                     <content>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                          <columns>
+                            <TableColumn prefWidth="89.33331561088562" text="IdFactura" />
+                            <TableColumn prefWidth="106.66667938232422" text="Num. Producto" />
+                              <TableColumn prefWidth="98.00007629394531" text="Iva" />
+                              <TableColumn prefWidth="122.6666259765625" text="Total" />
+                          </columns>
+                        </TableView>
+                     </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <ScrollPane fx:id="inventoryScroll" layoutX="419.0" layoutY="61.0" prefHeight="393.0" prefWidth="253.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="393.0" prefWidth="233.0">
+                     <children>
+                        <TableView prefHeight="387.0" prefWidth="235.0">
+                          <columns>
+                            <TableColumn prefWidth="231.99997460842133" text="Historial de Productos" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <ToolBar fx:id="inventoryBar" layoutX="2.0" prefHeight="62.0" prefWidth="671.0">
+               <items>
+                  <Button id="menuBoton" mnemonicParsing="false" prefHeight="51.0" prefWidth="131.0" text="Valor Inventario" />
+                  <Button id="menuBoton" mnemonicParsing="false" prefHeight="51.0" prefWidth="136.0" text="Liquido a percibir" />
+                  <Button id="menuBoton" mnemonicParsing="false" prefHeight="51.0" prefWidth="135.0" text="Ingresos Mensual" />
+                  <Button id="menuBoton" mnemonicParsing="false" prefHeight="51.0" prefWidth="241.0" text="Reporte Mensual" />
+               </items>
+            </ToolBar>
+            <ToolBar fx:id="reservationsBar" layoutX="2.0" prefHeight="62.0" prefWidth="671.0" visible="false">
+               <items>
+                  <Button id="menuBoton" mnemonicParsing="false" onAction="#tableView" prefHeight="51.0" prefWidth="131.0" text="Mesas" />
+                  <Button id="menuBoton" mnemonicParsing="false" prefHeight="51.0" prefWidth="131.0" text="Mesa 1" />
+                  <Button id="menuBoton" mnemonicParsing="false" prefHeight="51.0" prefWidth="131.0" text="Mesa 2" />
+                  <Button id="menuBoton" mnemonicParsing="false" prefHeight="51.0" prefWidth="131.0" text="Mesa 3" />
+               </items>
+            </ToolBar>
+            <SplitPane fx:id="reservationsPane" dividerPositions="0.3220338983050848" layoutX="2.0" layoutY="62.0" prefHeight="393.0" prefWidth="671.0" visible="false">
+              <items>
+                <AnchorPane id="pane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TableView layoutY="64.0" prefHeight="326.0" prefWidth="212.0">
+                          <columns>
+                            <TableColumn prefWidth="208.66664111614227" text="Reservas" />
+                          </columns>
+                        </TableView>
+                        <Button id="menuBoton" mnemonicParsing="false" onAction="#reservationView" prefHeight="61.0" prefWidth="212.0" text="Reservas" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane id="pane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="441.0">
+                     <children>
+                        <Label id="labeltitulo" layoutX="37.0" layoutY="22.0" prefHeight="61.0" prefWidth="376.0" text="Reserva datos" />
+                        <Label id="label" layoutX="14.0" layoutY="128.0" prefHeight="24.0" prefWidth="107.0" text="Id Reserva" />
+                        <Label id="label" layoutX="14.0" layoutY="207.0" text="Teléfono" />
+                        <Label id="label" layoutX="117.0" layoutY="276.0" text="Tiempo" />
+                        <Label id="label" layoutX="238.0" layoutY="207.0" text="Fecha" />
+                        <Label id="label" layoutX="238.0" layoutY="128.0" prefHeight="24.0" prefWidth="83.0" text="Nombre" />
+                        <TextField editable="false" layoutX="329.0" layoutY="127.0" prefHeight="25.0" prefWidth="107.0" />
+                        <TextField editable="false" layoutX="312.0" layoutY="206.0" prefHeight="25.0" prefWidth="125.0" />
+                        <TextField editable="false" layoutX="133.0" layoutY="127.0" prefHeight="25.0" prefWidth="91.0" />
+                        <TextField editable="false" layoutX="117.0" layoutY="206.0" prefHeight="25.0" prefWidth="107.0" />
+                        <TextField editable="false" layoutX="205.0" layoutY="275.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

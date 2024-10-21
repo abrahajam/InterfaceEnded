@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="660.0" stylesheets="@Application.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.RegisterController">
+   <children>
+      <TextField layoutX="136.0" layoutY="152.0" />
+      <TextField layoutX="486.0" layoutY="152.0" prefHeight="25.0" prefWidth="151.0" />
+      <TextField layoutX="136.0" layoutY="247.0" />
+      <TextField layoutX="486.0" layoutY="248.0" prefHeight="25.0" prefWidth="151.0" />
+      <Label id="labeltitulo" layoutX="73.0" layoutY="37.0" text="Register your user 😃" />
+      <Label id="label" layoutX="59.0" layoutY="153.0" text="Name" />
+      <Label id="label" layoutX="37.0" layoutY="247.0" stylesheets="@Application.css" text="Address" />
+      <Label id="label" layoutX="30.0" layoutY="339.0" text="Password" />
+      <Label id="label" layoutX="374.0" layoutY="153.0" text="Surname" />
+      <Label id="label" layoutX="316.0" layoutY="248.0" text="Number Phone" />
+      <Label id="label" layoutX="312.0" layoutY="340.0" text="Corf. Password" />
+      <PasswordField layoutX="136.0" layoutY="339.0" />
+      <PasswordField layoutX="487.0" layoutY="340.0" />
+      <Button fx:id="RegisterBoton" layoutX="276.0" layoutY="398.0" mnemonicParsing="false" onAction="#userRegister" text="Register" />
+      <Button fx:id="backBoton" layoutX="264.0" layoutY="463.0" mnemonicParsing="false" onAction="#backHome" text="Back home" />
+   </children>
+</Pane>

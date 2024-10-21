@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" prefHeight="379.0" prefWidth="427.0" stylesheets="@Application.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.MainController">
+   <children>
+      <Button fx:id="signupBoton" layoutX="163.0" layoutY="312.0" mnemonicParsing="false" onAction="#register" text="Sign up" />
+      <Button fx:id="loginBoton" layoutX="165.0" layoutY="252.0" mnemonicParsing="false" onAction="#login" prefHeight="41.0" prefWidth="101.0" text="Sign in" />
+      <PasswordField layoutX="189.0" layoutY="165.0" />
+      <TextField layoutX="189.0" layoutY="123.0" />
+      <Label id="label" layoutX="119.0" layoutY="124.0" text="User" />
+      <Label id="label" layoutX="67.0" layoutY="166.0" text="Password" />
+      <Label id="labeladvertencia" alignment="CENTER" layoutX="36.0" layoutY="209.0" prefHeight="17.0" prefWidth="355.0" />
+      <Label id="labeltitulo" layoutX="46.0" layoutY="28.0" text="APP CARTAS" />
+   </children>
+</Pane>

@@ -1,0 +1,96 @@
+#pane {
+    -fx-background-color: #34495e; /* Fondo oscuro */
+}
+
+#loginBoton, #signupBoton, #signinBoton, #backBoton, #RegisterBoton{
+    -fx-background-color: #3498db; /* Fondo azul claro */
+    -fx-text-fill: #ffffff; /* Texto blanco */
+    -fx-font-family: "Arial", sans-serif; /* Fuente agradable */
+    -fx-font-size: 18px; /* Tamaño de fuente ligeramente más grande */
+    -fx-background-radius: 10; /* Bordes redondeados */
+    -fx-padding: 10 20; /* Ajuste de relleno */
+    -fx-effect: dropshadow(three-pass-box, #34495e, 10, 0.5, 2, 2); /* Efecto de sombra */
+    -fx-cursor: hand; /* Cambia el cursor al pasar el ratón */
+}
+
+#loginBoton:hover, #signupBoton:hover, #signinBoton:hover, #backBoton:hover, #RegisterBoton:hover  {
+    -fx-background-color: #2980b9; /* Fondo azul oscuro al pasar el ratón */
+}
+
+#loginBoton:pressed, #signupBoton:pressed, #signinBoton:pressed, #backBoton:pressed, #RegisterBoton:pressed {
+    -fx-background-color: #1a5276; /* Azul más oscuro al presionar el botón */
+    -fx-effect: innershadow(gaussian, #1a5276, 10, 0.5, 0, 0); /* Efecto de hundimiento */
+    -fx-translate-y: 2; /* Desplazamiento hacia abajo al presionar */
+}
+
+
+/* Estilo para TableView con bordes redondos, fondo azul muy oscuro y texto blanco */
+.table-view {
+    -fx-background-color: #1a1a3b; /* Fondo azul muy oscuro */
+    -fx-background-radius: 10; /* Bordes redondeados */
+}
+
+/* Estilo para las celdas de TableView */
+.table-cell {
+    -fx-background-color: #1a1a3b; /* Fondo azul muy oscuro */
+    -fx-text-fill: #ffffff; /* Texto blanco */
+    -fx-font-family: "Arial", sans-serif; /* Fuente agradable */
+    -fx-font-size: 16px; /* Tamaño de fuente ligeramente más grande */
+}
+
+/* Estilo para las filas seleccionadas en TableView */
+.table-row-cell:selected {
+    -fx-background-color: #3498db; /* Fondo azul claro para fila seleccionada */
+}
+
+/* Estilo para las filas al pasar el ratón sobre ellas en TableView */
+.table-row-cell:hover {
+    -fx-background-color: #2980b9; /* Fondo azul oscuro al pasar el ratón */
+}
+
+/* Estilo para las filas presionadas en TableView */
+.table-row-cell:pressed {
+    -fx-background-color: #1a5276; /* Azul más oscuro al presionar la fila */
+}
+
+/* Estilo para los títulos de las columnas en TableView */
+.table-view .column-header-background {
+    -fx-background-color: #1a1a3b; /* Fondo azul muy oscuro, igual al fondo de la tabla */
+    -fx-background-radius: 10 10 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+/* Estilo para el texto de los títulos de las columnas en TableView */
+.table-view .column-header {
+    -fx-text-fill: #ffffff; /* Texto blanco */
+    -fx-background-radius: 10; /* Bordes redondeados para las columnas */
+}
+
+#label{
+    -fx-font-family: "Eras Bold ITC";
+    -fx-font-size: 20px;
+    -fx-text-fill: #ffffff;
+}
+
+#labeltitulo{
+    -fx-font-family: "Eras Bold ITC";
+    -fx-font-size: 52px;
+    -fx-text-fill: #ffffff;
+}
+
+#labeladvertencia{
+    -fx-font-family: "Eras Bold ITC";
+    -fx-font-size: 20px;
+    -fx-text-fill: #ff0000;
+}
+
+#menuBoton{
+    -fx-background-radius: 0px;
+    -fx-border:none;
+    -fx-text-fill:#ffffff;
+    -fx-background-color:#007bff;
+}
+
+#menuBoton:hover {
+    -fx-background-color:#0b7dda;
+}
+

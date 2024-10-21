@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<SplitPane id="pane" dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="546.0" stylesheets="@Application.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.TableController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="160.0">
+         <children>
+            <Button id="menuBoton" layoutX="-4.0" layoutY="-1.0" mnemonicParsing="false" onAction="#showNewTable" prefHeight="48.0" prefWidth="166.0" text="Nueva Mesa" />
+            <Button id="menuBoton" layoutY="47.0" mnemonicParsing="false" onAction="#showDeleteTable" prefHeight="48.0" prefWidth="159.0" text="Eliminar Mesa" />
+            <Button id="backBoton" fx:id="backHome" layoutX="6.0" layoutY="241.0" mnemonicParsing="false" onAction="#backBoton" prefHeight="48.0" prefWidth="147.0" text="Cancelar" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Pane fx:id="newMesa" prefHeight="297.0" prefWidth="378.0">
+               <children>
+                  <Label id="labeltitulo" layoutX="30.0" layoutY="14.0" text="Nueva Mesa" />
+               </children></Pane>
+            <Pane fx:id="deleteMesa" prefHeight="297.0" prefWidth="378.0" visible="false">
+               <children>
+                  <Label id="labeltitulo" layoutX="4.0" layoutY="14.0" prefHeight="61.0" prefWidth="370.0" text="Eliminar Mesa" />
+               </children></Pane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

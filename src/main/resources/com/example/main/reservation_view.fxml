@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<SplitPane id="pane" dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="645.0" stylesheets="@Application.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.main.ReservationController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="160.0">
+            <children>
+                <Button id="menuBoton" layoutX="-4.0" layoutY="-1.0" mnemonicParsing="false" onAction="#showReservation" prefHeight="61.0" prefWidth="194.0" text="Nueva Reserva" />
+                <Button id="menuBoton" layoutY="60.0" mnemonicParsing="false" onAction="#deleteReservation" prefHeight="61.0" prefWidth="188.0" text="Eliminar Reserva" />
+                <Button id="backBoton" fx:id="backHome" layoutX="15.0" layoutY="321.0" mnemonicParsing="false" onAction="#backBoton" prefHeight="61.0" prefWidth="156.0" text="Cancelar" />
+            </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <Pane fx:id="newReservaPane" prefHeight="399.0" prefWidth="448.0">
+               <children>
+                  <Label id="labeltitulo" layoutX="29.0" layoutY="14.0" text="Nueva Reserva" />
+               </children></Pane>
+                <Pane fx:id="deleteReservaPane" prefHeight="397.0" prefWidth="448.0" visible="false">
+               <children>
+                  <Label id="labeltitulo" layoutY="14.0" prefHeight="61.0" prefWidth="448.0" text="Eliminar Reserva" />
+               </children></Pane>
+            </children></AnchorPane>
+    </items>
+</SplitPane>
